@@ -10,8 +10,8 @@
         $quantidadeCaracteres = mb_strlen($texto);
 
         return [
-            "invertido" = $textoInvertido,
-            "quantidade" = $quantidadeCaracteres
+            "invertido" => $textoInvertido,
+            "quantidade" => $quantidadeCaracteres
 
         ];
     }
@@ -21,7 +21,7 @@
     echo "Texto original: $texto_usuario <br>";
 
     $resultado = inverterTexto($texto_usuario);
-    
+
     echo "Texto invertido: " . $resultado["invertido"] . "<br>";
     echo "Quantidade de caracteres: " . $resultado["quantidade"] . "<br>";
 
