@@ -12,5 +12,5 @@ function gerarSenha($tamanho) {
     return $senha;
 }
 
-echo gerarSenha(10);
+echo "Senha: " . gerarSenha(10);
 ?>
