@@ -4,11 +4,23 @@ function ordenarNomes($nomes){
 
     $lista = explode(",", $nomes);
 
+    $lista = array_map("trim", $lista);
+
     sort($lista);
 
-    return implode(", ", $lista);
+    return $lista;
 }
 
-echo ordenarNomes("Thais, Serenna, Henrique, Annie, Brenda");
+$nomes_usuario = "Thais, Serenna, Henrique, Annie, Brenda";
+
+echo "Lista original: $nomes_usuario <br>";
+
+$lista_ordenada = ordenarNomes($nomes_usuario);
+
+echo "Lista organizada: <br>";
+
+foreach ($lista_ordenada as $usuario){
+    echo "$usuario <br>";
+}
 
 ?>
