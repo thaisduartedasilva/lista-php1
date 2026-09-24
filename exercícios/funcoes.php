@@ -66,9 +66,9 @@ function inverter_texto($texto){
             "quantidade" => $quantidadeCaracteres
 
         ];
-    }
-
+        
     $resultado = inverter_texto($texto_usuario);
+}
 
 //Calcular idade;
 
