@@ -9,7 +9,7 @@ function calcular_IMC ($peso, $altura){
 //Validar e-mail;
 
 function validar_email ($email){
-    if ($email.include(@) || $email.include(.)){
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)){
         return "Email válido";
     }else{
         return "Email inválido";
@@ -34,9 +34,6 @@ function gerarSenha($tamanho) {
 //Contar vogais;
 
 function contar_vogais($texto){
-
-    $palavra = str_word_count($texto);
-
     $vogais = 0;
 
     $texto = strtolower($texto);
@@ -49,6 +46,8 @@ function contar_vogais($texto){
             $vogais++;
         }
     }
+
+    return $vogais; 
 }
 
 //Inverter texto;
@@ -69,24 +68,24 @@ function inverter_texto($texto){
         ];
     }
 
-    $resultado = inverterTexto($texto_usuario);
+    $resultado = inverter_texto($texto_usuario);
 
 //Calcular idade;
 
 function calcular_idade($ano){
-    return $ano - 2026;
+    return 2026 - $ano;
 
 }
 
 //Converter moeda;
 
-return canverter_moeda($valor, $cotacao){
+function canverter_moeda($valor, $cotacao){
     return $valor*$cotacao;
 }
 
 //Formatar telefone;
 
-function formatarTelefone($telefone) { 
+function formatar_telefone($telefone) { 
     $telefone = preg_replace('/[^0-9]/', '', $telefone); 
     
     if (strlen($telefone) == 11) { 
@@ -100,7 +99,7 @@ function formatarTelefone($telefone) {
 
 //Gerar saudação conforme o horário;
 
-function gerar_saldacao($hora){
+function gerar_saudacao($hora){
     if($hora<12){
         return "Bom dia!";
 
@@ -114,7 +113,7 @@ function gerar_saldacao($hora){
 
 //Validar uma senha forte.
 
-function validarSenhaForte($senha) { 
+function validar_senha_forte($senha) { 
     if (strlen($senha) < 8) { 
         return false; 
     } 
