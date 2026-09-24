@@ -98,7 +98,7 @@ echo gerar_saudacao(8);
 
 <?php
 
-if (validar_senha_forte("SenhaMuitoForte876")){
+if (validar_senha_forte("SenhaMuitoForte")){
     echo "Sua senha é forte!";
     
 }else{

@@ -53,21 +53,13 @@ function contar_vogais($texto){
 //Inverter texto;
 
 function inverter_texto($texto){
-        $caracteres = preg_split('//u', $texto, -1, PREG_SPLIT_NO_EMPTY);
-
-        $caracteresInvertidos = array_reverse($caracteres);
-
-        $textoInvertido = implode('', $caracteresInvertidos);
-
-        $quantidadeCaracteres = mb_strlen($texto);
-
-        return [
-            "invertido" => $textoInvertido,
-            "quantidade" => $quantidadeCaracteres
-
-        ];
+    $caracteres = preg_split('//u', $texto, -1, PREG_SPLIT_NO_EMPTY); 
         
-    $resultado = inverter_texto($texto_usuario);
+    $caracteresInvertidos = array_reverse($caracteres); 
+    
+    $textoInvertido = implode('', $caracteresInvertidos); 
+    
+    return $textoInvertido;
 }
 
 //Calcular idade;
@@ -79,7 +71,7 @@ function calcular_idade($ano){
 
 //Converter moeda;
 
-function canverter_moeda($valor, $cotacao){
+function converter_moeda($valor, $cotacao){
     return $valor*$cotacao;
 }
 
